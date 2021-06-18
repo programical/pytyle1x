@@ -20,7 +20,7 @@ Config.KEYMAP = {
 }
 
 Config.FILTER = [
-    'gmrun', 'gimp', 'download',
+    'gmrun', 'gimp', 'download', 'xfce4-appfinder'
 ]
 
 Config.LAYOUT = {
