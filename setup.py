@@ -4,12 +4,12 @@ import setuptools, sys
 
 setuptools.setup(
     name = 'pytyle1x',
-    version = '1.0.2',
-    author = 'programical',
+    version = '1.0.3',
+    author = 'zehkira',
     description = 'A tiling manager for EWMH compliant window managers',
     long_description = open('README.md', 'r').read(),
     long_description_content_type = 'text/markdown',
-    url = 'https://github.com/programical/pytyle1x',
+    url = 'https://github.com/zehkira/pytyle1x',
     packages = setuptools.find_packages(),
     install_requires = ['python-xlib'],
     classifiers = [
