@@ -95,10 +95,19 @@ class Probe:
 
     # Queries the window manager for the currently active desktop.
     def get_desktop(self):
-        return self.get_root().get_full_property(
+        dsk = self.get_root().get_full_property(
             self.atom('_NET_CURRENT_DESKTOP'),
             0
-        ).value[0]
+        )
+
+        # sometimes there's no active desktop for some reason
+        if dsk:
+            dsk = dsk.value[0]
+        else:
+            print('Warning: assuming active desktop 0')
+            dsk = 0
+
+        return dsk
 
     # Queries the window manager for all available desktops. It also stores each
     # desktop name, which serves no function in PyTyle currently. (Good for easy
